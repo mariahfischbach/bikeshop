@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<meta charset="utf-8">
+<title>Bike shop</title>
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="../lab 2 bike rentals/styles/slicknav.css">  <!--CSS slicknav stylesheet-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.slicknav.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    });
+</script>
+<style>
+    body {
+    	margin: 10px auto;                    /* 10 pixel margin to the entire page*/
+        width: 725px;                         /*set the width of the page to 725 pixels*/
+        background-color: #5f84a2;       /*add a colored background*/
+        
+    }
+    dt {
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+<header>
+    <!--Caption and images-->
+    <figcaption> Thank you for your submission</figcaption>
+        <figure class="bike">
+        <img class="bike" src= "../lab 2 bike rentals/images/mount bike.jpg" />
+        <img class= "bmx" src= "../lab 2 bike rentals/images/bikes.jpg" />
+        </figure>
+
+<!-- Navigation Menu -->
+<nav id="nav_menu"> 
+    <ul>
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="sales.html">Sales</a></li> 
+        <li><a href="rentals.html" >Rentals</a></li>
+        <li><a href="services.html" >Services</a></li> 
+        <li><a href="contact.html" class="current" class="lastitem">Contact</a></li>
+    </ul> 
+</nav>  
+</header> 
+
+<body>
+    <!--Body message -->
+    <h3>Contact Page Reciept</h3>
+    <!-- Displays the contact page data -->
+    <script>display_data();</script>
+</body>
+</html>
