@@ -1,0 +1,281 @@
+/*@author Jasmin Washington, Jo's road bikes CSS styles page, Southern Illinois University */
+/*Date Developed: 10-26-2022 Date Tested: 10-27-2022*/
+
+@media only screen and (max-width: 2024px) {
+    #mobile_menu {display: none; }
+  }
+  
+  /* tablet portrait layout (768px to 959px)*/
+  
+@media only screen and (max-widht: 959px){
+    #mobile_menu {display: none;}
+}
+  
+  /*mobile landscape layout (480px to 767)*/
+  
+@media only screen and (max-width: 767px){
+    #mobile_menu {display: block; }
+    #nav_menu {display: none; }
+    header h2 {font-size: 1.375em; }        /* 22 / 16*/
+    header h3 {font-size: .8125em; }        /*13 / 16*/
+    p {font-size: .875em }                  /*14 / 16*/
+    article h1, main h2, aside h2 
+        {font-size: 1em; }                 /*base font size*/
+    aside li {font-size: .875em; }         /*14 / 16*/
+}
+  /* mobile portrait layout (479px or less) */
+
+@media only screen and (max-width: 479px){
+    #mobile_menu{ display: block; }
+    #nav_menu {display: none; }
+    header h2 {font-size: 1.375em; }       /*22 / 16*/       
+    header h3 {font-size: .8125em; }       /*13 / 16*/
+    p{ font-size: .875em; }
+    article h1, main h2, aside h2
+    {font-size: 1em; }                     /*base font size*/
+    aside li {font-size: .875em; }         /*14 / 16*/
+}
+/*Media Query for services table*/
+@media only screen and (max-width:470px) {
+    th, td{ display: block;}
+    thead {display: none;}
+    tr td:first-child {
+        font-weight: bold;
+        font-size: 110%;
+        background-color:#7b9fcf;
+    }
+    tbody td {border-bottom-style: none;}
+    tfoot{
+        background-color:#cad5e3;
+        border: none;
+        border-top: 1px solid black;
+    }
+    tfoot th, tfoot td:nth-of-type(1) {display: none;}
+}
+
+/*The styles of the elements*/
+/*All of the pages headers*/
+figcaption{
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    border-bottom:2px solid #194569;
+}
+
+/*Image rollover for all pages*/
+.bike {
+    width: 100%;
+    position: relative;	
+	margin:  10 auto;
+	max-width: 630px;
+    height: 275px;
+    border-radius: 50px;                   
+}
+/* Image rollover */
+.bike img {
+    
+    width: 100%; 
+    position: absolute;	
+    border: 5px solid;          
+    border-color: #1c4966; 
+    border-radius: 50px;
+	opacity: 1;
+	max-width: 720px;
+	height: 250px;
+}
+
+/*fade effect*/
+
+.bike .bmx{
+  transition: opacity 3s linear;
+}
+
+/* burned in effect on image */
+.bike:hover > .bmx {
+  opacity: 0;
+}
+
+/*index page CSS*/
+body {
+    margin: 10px auto;                    /* 10 pixel margin to the entire page*/
+    width: 725px;                         /*set the width of the page to 725 pixels*/
+    background-color: #5f84a2;         /*add a colored background*/
+    
+}
+/*rentals page CSS*/
+.rentalmain {
+    height: 750px;
+    width: 50%;
+    float:left;                             /*main column floats left*/
+    border-right: 2px solid #194569;     /*borders*/
+    border-top: 2px solid #194569;
+    line-height: 1.3;                      /*space between lines*/
+    font-size: medium;
+    background: #b7d0e1;
+    text-align: center;                    /*align all the text to the center*/
+}
+
+aside {
+    background: #b7d0e1;
+    width: 49.6%;
+    height: 750px;
+    float:right;                           /*float right*/
+    line-height: 1.8;
+    font-size: medium;
+    border-top: 2px solid #194569;
+    text-align: center;                    /*centering the text*/
+}
+
+h1, h2, h3 {
+    padding: 10px;                        /*10px padding to all the headers*/
+    text-decoration:underline; 
+    text-shadow: 1px 1px 1px black;   
+}
+
+p {
+    padding: 0 5px 0;                /* 5 pixel left and right to paragraph tags*/  
+} 
+
+/*rental page header*/
+.rentalhead header{
+    text-align: center;
+    background: #91aec4 ;
+}
+
+footer {
+    text-align: center;
+    clear: both;
+    border-top: 2px solid #194569;         /*blue top border on footer*/
+    background: #91aec4;
+}
+
+ol {
+    padding-left: 10px;                     /*10 pixel left padding to all list items*/
+}
+
+img {max-width: 10%;                    /*setting the dimensions of the image*/
+    box-shadow: 3px 3px 5px 0 black; /*black angled box shadow on image */
+
+}
+
+/*Serives Page CSS*/
+.fig1, .cap1{
+    margin: 0;
+    padding: 0;
+}
+.fig1{
+    border: 1px solid black;
+    width: 720px;
+    padding: 10px;
+}
+.cap1{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 120%;
+    padding-bottom: .25em;
+}
+table{
+    background-color: black;
+    margin: 10px;
+}
+
+thead{background-color:#7b9fcf;
+}
+
+tbody{background-color:#cad5e3;
+text-align: center;}
+
+/*navigation menu*/
+#nav_menu ul{
+    list-style-type: none;
+    padding: 1em;
+    text-align: center;
+    border-top: 2px solid #1c4966;
+    border-bottom: 2px solid #1c4966;
+}
+#nav_menu ul li{
+    display: inline;
+    padding: 0 1.5em;
+}
+#nav_menu ul li a{
+    font-weight: bold;
+    color: blue;
+}
+
+/*Css for contact Page*/
+textarea{height: 5em; width: 25em;}
+
+.title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.inquiry{
+    border: 1px solid black;
+    width: 690px;
+    height: 3%;
+    padding: 1%;
+}
+
+.biketype{
+    border: 1px solid black;
+    width: 690px;
+    height: 10%;
+    padding: 1%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.create{
+    border: 1px solid black;
+    width: 690px;
+    height: 10%;
+    padding: 1%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+
+}
+
+.comments{
+    border: 1px solid black;
+    width: 690px;
+    height: 10%;
+    padding: 1%;
+    margin-bottom: 3%;
+}
+
+.account{
+    border: 1px solid black;
+    width: 710px;
+    height: 10%;
+    padding: 1%;
+
+}
+
+.radio{
+    float: left;
+    width: 9em;
+}
+
+label, input{
+    font-size: 90%;
+}
+label{
+    display: inline-block;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    padding:1%;
+
+}
+input{
+    display: inline-block;
+    width: 10em;
+
+
+}
+/*A red box will be placed around all the firelds that are required*/
+input:required, input[required]{
+    border: 1px solid red;
+}
